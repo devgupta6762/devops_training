@@ -1,0 +1,23 @@
+#create a bash script to input 2 numbers and print sum of them on ubuntu terminal
+
+
+mkdir sum                                          //make a directory first
+cd sum                                             //go inside 
+touch sum.sh                                       //create a file with .sh extension
+vi sum.sh                                          //open script shell
+
+#
+
+main script
+{
+#!/bin/bash                                        //mandatory comment
+read -p "Enter first number: " num1
+read -p "Enter second number: " num2
+sum=$(( $num1 + $num2 ))
+echo "Sum is: $sum"
+}
+esc+:+wq+!                                         //to save script and to take exit through shell too
+
+
+chmod +x sum.sh                                    //to change the permisssion
+bash sum.sh                                        //to run the script
