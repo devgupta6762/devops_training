@@ -1,5 +1,5 @@
 ##### Create a shell script for hello world with name ninja.sh via root user
->`vi ninja.sh`(****echo Hello world!!****)[*****screenshot*****]()
+>`vi ninja.sh`(****echo Hello world!!****)[*****screenshot*****](https://github.com/devgupta6762/linux/blob/bash/images/hello.png)
 ##### Verify the permission of ninja.sh
 >`ls -l`(*******-rwxrwxr-x*******)
 ##### Execute the script, if it didn't get executed give appropriate permissions for root user.
