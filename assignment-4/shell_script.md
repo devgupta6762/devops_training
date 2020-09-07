@@ -6,7 +6,8 @@
 >`chmod +x ninja.sh`
 `./ninja.sh`
 ##### Switch to normal user and execute ninja.sh, if it didn't get executed give appropriate ownership to user (do not change the owner of file)
-5. Move ninja.sh to a path variable use it as a binary ie invoke it from anywhere.
+##### Move ninja.sh to a path variable use it as a binary ie invoke it from anywhere
+>`sudo mv ninza.sh /bin`
 - Special Permissions
   1. Learn about SUID, SGID and sticky bit.
   2. And Set it for a dummy file.

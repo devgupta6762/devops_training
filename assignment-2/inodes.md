@@ -31,4 +31,19 @@ You cannot access files by inodes, because that would break access control via p
 >`df -i`{*copy the content of files having inode usage less than 10% ,after then delete that file*}
 
 • now simulate this problem for a directory Sample_Dir which will act as our dummy file system.Sample_Dir will have multiple directories and all the directories will have multiple files of any size.
-• write a script for this problem.    
+
+>#!/bin/bash
+ set -ex
+ IFS=$'\n'
+ cd Sample_Dir
+ rm -rf final_data.log
+ array=($(find . -type f -size -10k))
+ echo "${array[*]}"
+ len="${#array[@]}"
+ echo "$len"
+ for i in "${array[@]}"
+ do
+    echo $i
+    cat $i >> final_data.log
+    rm -rf $i
+ done
