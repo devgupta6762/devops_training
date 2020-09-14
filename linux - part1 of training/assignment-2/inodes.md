@@ -15,7 +15,7 @@ You cannot access files by inodes, because that would break access control via p
 
 • ****find out the total no of inodes assigned to your file system****
 >`df -i`
-[****screenshot****](https://github.com/devgupta6762/linux/blob/bash/images/total_inodes.png)
+[****screenshot****](https://github.com/devgupta6762/devops_training/blob/master/linux%20-%20part1%20of%20training/images/total_inodes.png)
 
 • ****create a directory dir_1,make a hard link and soft link of dir_1****
 >1. `mkdir dir_1`****{to make a directory}****
