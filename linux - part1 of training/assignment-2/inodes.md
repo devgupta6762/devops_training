@@ -4,7 +4,7 @@
 
 • *****_change the inode no of File1_*****
 >`the only way to change the inode number is to copy the file to a new file (which then would get a new inode`
-[***inode number***](https://github.com/devgupta6762/linux/blob/fe2c9ef5cedb9221b1986c554e3ca0ac08d4f584/images/image1.png.png)
+[***inode number***](https://github.com/devgupta6762/devops_training/blob/master/linux%20-%20part1%20of%20training/images/image1.png.png)
 
 
 • ****change the permission of File1 and add some content in File1 using the inode no of File1****
