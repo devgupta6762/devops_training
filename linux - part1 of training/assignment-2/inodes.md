@@ -11,6 +11,7 @@
 >`chmod + rwx File1.txt`&&`cat >> File1.txt{add content}`
 You cannot access files by inodes, because that would break access control via permissions. For example, if you don't have the permission to traverse a directory, then you can't access any of the files in that directory no matter what the permissions on the file are. If you could access a file by inode, that would bypass directory permissions.
 [****screenshot****](https://github.com/devgupta6762/linux/blob/bash/images/permissiion.png)
+[What is this](permissiion.png)
 
 • ****find out the total no of inodes assigned to your file system****
 >`df -i`
