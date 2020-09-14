@@ -10,7 +10,7 @@
 • ****change the permission of File1 and add some content in File1 using the inode no of File1****
 >`chmod + rwx File1.txt`&&`cat >> File1.txt{add content}`
 You cannot access files by inodes, because that would break access control via permissions. For example, if you don't have the permission to traverse a directory, then you can't access any of the files in that directory no matter what the permissions on the file are. If you could access a file by inode, that would bypass directory permissions.
-[****screenshot****](https://github.com/devgupta6762/linux/blob/bash/images/permissiion.png)
+[****screenshot****](https://github.com/devgupta6762/devops_training/blob/master/linux%20-%20part1%20of%20training/images/permissiion.png)
 
 
 • ****find out the total no of inodes assigned to your file system****
