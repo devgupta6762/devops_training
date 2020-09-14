@@ -1,0 +1,56 @@
+#!/bin/bash
+
+operation=$1
+
+filesize50mb() {
+fileName=$1
+cd /home/opstree/Downloads/Ninja/day8/
+a=`find "$fileName" -printf "%s\n"`
+
+if [[ $a -ge 20000 ]]
+then
+echo "File can be compressed"
+tar -cvf $fileName.tgz $fileName
+if [[ $? -eq 0 ]]
+then
+	echo "Removing the file now..."
+	rm $fileName
+fi
+fi
+}
+
+filelastdate() {
+fileName=$1
+cd /home/opstree/Downloads/Ninja/day8/
+find $fileName -mmin +$((1*24)) | tar -cvf $fileName.tgz $fileName
+rm $fileName
+}
+
+file7daysold() {
+fileName=$1
+cd /home/opstree/Downloads/Ninja/day8/
+for item in $(find /home/opstree/Downloads/Ninja/$fileName -mtime +7)
+do
+echo $item
+aws s3 cp $item s3://testbucketforbashfiletranser
+done
+rm $fileName
+
+}
+
+fileName=#2
+
+if [[ $operation == filesize50mb ]]
+then
+	filesize50mb $2
+fi
+
+if [[ $operation == filelastdate ]]
+then
+	filelastdate $2
+fi
+
+if [[ $operation == file7daysold ]]
+then
+	file7daysold $2
+fi
