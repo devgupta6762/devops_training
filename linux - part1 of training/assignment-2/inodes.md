@@ -16,10 +16,11 @@ You cannot access files by inodes, because that would break access control via p
 >`df -i`
 [****screenshot****](https://github.com/devgupta6762/linux/blob/bash/images/total_inodes.png)
 
-• ****create a directory dir_1,make a hard link and soft link of dir_1****
+• ****create a directory dir_1,make a hard link and soft link oqf dir_1****
 >1. `mkdir dir_1`****{to make a directory}****
-2. The reason hard-linking directories is not allowed is a little technical. Essentially, they break the file-system structure. You should generally not use hard links anyway
-3. ln -s (file path) |[****screenshot****](https://github.com/devgupta6762/linux/blob/bash/images/softlink.png)
+ 2. Hard links can link only files,not directories.The reason hard-linking directories is not allowed is a little technical. Essentially, they break the file-system structure. You should generally not use hard links anyway
+ 3. ln -s (file path) |[****screenshot****](https://github.com/devgupta6762/devops_training/blob/master/linux%20-%20part1%20of%20training/images/softlink.png)
+ [complete overview on this topic](https://medium.com/@meghamohan/hard-link-and-symbolic-link-3cad74e5b5dc)
 
 * Hard link is the exact replica of the actual file it is pointing to . Both the hard link and the linked file shares the same inode . If the source file is deleted ,the hard link still works and you will be able to access the file until the number of hard links to file isn't 0(zero)*
  * Soft link is a symbolic link,It simply points to another entry somewhere in the file system*
